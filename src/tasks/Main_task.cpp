@@ -395,10 +395,6 @@ bool Main_task::init_usb()
 	__HAL_RCC_USB_OTG_HS_CLK_ENABLE();
 	__HAL_RCC_USB_OTG_HS_ULPI_CLK_ENABLE();
 
-	// TODO: switch to isr mode
-	// HAL_NVIC_SetPriority(OTG_HS_IRQn, 5, 0);
-	// HAL_NVIC_EnableIRQ(OTG_HS_IRQn);
-
 	// usb_core.set_control_callback(std::bind(&Main_task::usb_control_callback, this, std::placeholders::_1));
 	// usb_core.set_config_callback(std::bind(&Main_task::usb_config_callback, this));
 	// usb_core.set_descriptor_callback(std::bind(&Main_task::usb_get_descriptor_callback, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
